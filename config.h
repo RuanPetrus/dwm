@@ -134,9 +134,11 @@ static Key keys[] = {
 	{ MODKEY,			            XK_equal,	spawn,		    SHCMD("pamixer --allow-boost -i 5; kill -44 $(pidof dwmblocks)") },
     { MODKEY,			            XK_w,		spawn,		    SHCMD("$BROWSER") },
     { MODKEY|ShiftMask,			    XK_n,		spawn,		    SHCMD("joplin-desktop") },
+    { MODKEY,			            XK_e,		spawn,		    SHCMD("pcmanfm") },
     { MODKEY|ShiftMask,		        XK_w,		spawn,		    SHCMD(TERMINAL " -e sudo nmtui") },
     { MODKEY,			            XK_n,		spawn,		    SHCMD(TERMINAL " -e nvim -c VimwikiIndex") },
     { MODKEY,			            XK_m,		spawn,		    SHCMD(TERMINAL " -e ncmpcpp") },
+    { MODKEY,			            XK_c,		spawn,		    SHCMD(TERMINAL " -e calcurse") },
     { 0,				            XK_Print,	spawn,		    SHCMD("flameshot gui") },
 };
 
