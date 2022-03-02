@@ -33,6 +33,7 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
+	{ "Apache NetBeans IDE 12.6",     NULL,       NULL,       0,            1,           -1 },
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
 };
@@ -107,7 +108,7 @@ static Key keys[] = {
     STACKKEYS(MODKEY,                          focus)
 	STACKKEYS(MODKEY|ShiftMask,                push)
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
+    { MODKEY,			            XK_d,		spawn,		    SHCMD("rofi -show drun") },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
@@ -140,6 +141,13 @@ static Key keys[] = {
     { MODKEY,			            XK_m,		spawn,		    SHCMD(TERMINAL " -e ncmpcpp") },
     { MODKEY,			            XK_c,		spawn,		    SHCMD(TERMINAL " -e calcurse") },
     { 0,				            XK_Print,	spawn,		    SHCMD("flameshot gui") },
+
+
+    { MODKEY,			            XK_F3,		spawn,		SHCMD("displayselect") },
+    { MODKEY,			            XK_F4,		spawn,		SHCMD(TERMINAL " -e pulsemixer; kill -44 $(pidof dwmblocks)") },
+    { MODKEY,			            XK_F9,		spawn,		SHCMD("dmenumount") },
+    { MODKEY,			            XK_F10,		spawn,		SHCMD("dmenuumount") }
+
 };
 
 /* button definitions */
