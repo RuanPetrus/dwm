@@ -9,7 +9,7 @@ static unsigned int gappx     = 10;        /* gaps between windows */
 static unsigned int snap      = 32;       /* snap pixel */
 static int showbar            = 1;        /* 0 means no bar */
 static int topbar             = 1;        /* 0 means bottom bar */
-static char font[]            = "FiraCode Nerd Font Mono:size=12";
+static char font[]            = "Hack Nerd Font Mono:size=12";
 static char dmenufont[]       = "monospace:size=10";
 static const char *fonts[]          = { font };
 static char normbgcolor[]           = "#222222";
@@ -33,7 +33,7 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Apache NetBeans IDE 12.6",     NULL,       NULL,       0,            1,           -1 },
+	{ "telas-Principal",     NULL,       NULL,       0,            1,           -1 },
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
 };
@@ -137,7 +137,7 @@ static Key keys[] = {
     { MODKEY|ShiftMask,			    XK_n,		spawn,		    SHCMD("joplin-desktop") },
     { MODKEY,			            XK_e,		spawn,		    SHCMD("pcmanfm") },
     { MODKEY|ShiftMask,		        XK_w,		spawn,		    SHCMD(TERMINAL " -e sudo nmtui") },
-    { MODKEY,			            XK_n,		spawn,		    SHCMD(TERMINAL " -e nvim -c VimwikiIndex") },
+        { MODKEY,			            XK_n,		spawn,		    SHCMD(TERMINAL " -e nvim -c VimwikiIndex") },
     { MODKEY,			            XK_m,		spawn,		    SHCMD(TERMINAL " -e ncmpcpp") },
     { MODKEY,			            XK_c,		spawn,		    SHCMD(TERMINAL " -e calcurse") },
     { 0,				            XK_Print,	spawn,		    SHCMD("flameshot gui") },
