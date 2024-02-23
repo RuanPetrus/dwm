@@ -64,6 +64,10 @@ clock() {
 	printf "^c$black^^b$blue^ $(date '+%H:%M')  "
 }
 
+day() {
+  printf "^c$blue^^b$black^ $(date +'%d/%m/%Y')"
+}
+
 
 # volume() {
 # 	vol="$(wpctl get-volume @DEFAULT_AUDIO_SINK@)"
@@ -94,5 +98,5 @@ while true; do
   [ $interval = 0 ] || [ $(($interval % 3600)) = 0 ] && updates=$(pkg_updates)
   interval=$((interval + 1))
 
-  sleep 1 && xsetroot -name "$updates $(battery) $(volume) $(cpu) $(mem) $(wlan) $(clock)"
+  sleep 1 && xsetroot -name "$updates $(battery) $(volume) $(cpu) $(mem) $(wlan) $(clock) $(day)"
 done
