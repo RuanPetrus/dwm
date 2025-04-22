@@ -165,7 +165,7 @@ static void (*bartabmonfns[])(Monitor *) = { NULL /* , customlayoutfn */ };
 #if BAR_PANGO_PATCH
 static const char font[]                 = "monospace 10";
 #else
-static const char *fonts[]               = { "Iosevka:style:medium:size=11", "FiraCode Nerd Font:medium:size=15" };
+static const char *fonts[]               = { "JetBrains Mono:size=11" };
 #endif // BAR_PANGO_PATCH
 
 // theme
@@ -876,10 +876,6 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 #endif // NODMENU_PATCH
 static const char *dmenucmd[] = {
 	"rofi -show drun",
-	#if BAR_DMENUMATCHTOP_PATCH
-	topbar ? NULL : "-b",
-	#endif // BAR_DMENUMATCHTOP_PATCH
-	NULL
 };
 static const char *termcmd[]  = { TERM, NULL };
 
