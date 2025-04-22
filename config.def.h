@@ -165,7 +165,7 @@ static void (*bartabmonfns[])(Monitor *) = { NULL /* , customlayoutfn */ };
 #if BAR_PANGO_PATCH
 static const char font[]                 = "monospace 10";
 #else
-static const char *fonts[]               = { "JetBrains Mono:size=11" };
+static const char *fonts[]               = { "JetBrains Mono:size=13" };
 #endif // BAR_PANGO_PATCH
 
 // theme
@@ -907,7 +907,7 @@ static const Key on_empty_keys[] = {
 
 static const Key keys[] = {
 	/* modifier                     key            function                argument */
-	{ MODKEY,                       XK_d,          spawn,                  {.v = dmenucmd } },
+	{ MODKEY,                       XK_d,          spawn,                  PCMD("rofi -show drun") },
 	{ MODKEY,                       XK_Return,     spawn,                  {.v = termcmd } },
 	{ MODKEY,                       XK_w,          spawn,                  PCMD("firefox") },
 
